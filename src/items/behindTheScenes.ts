@@ -28,7 +28,7 @@ export function addScriptedComponent() {
       Scripted.create(cone)
     }
 
-    const coneScriptInstance = new coneScript()
+    const coneScriptInstance = new coneScript(cone)
     classOfEachObject.set(cone, coneScriptInstance)
   }
 
@@ -40,7 +40,7 @@ export function addScriptedComponent() {
       Scripted.create(hydrant)
     }
 
-    const coneScriptInstance2 = new coneScript()
+    const coneScriptInstance2 = new coneScript(hydrant)
     classOfEachObject.set(hydrant, coneScriptInstance2)
   }
 }

@@ -1,4 +1,8 @@
-export class coneScript {
+import { Vector3 } from "@dcl/sdk/math"
+import { templateScript } from "./template"
+import { Transform } from "@dcl/sdk/ecs"
+
+export class coneScript extends templateScript {
 
   // variables
   public testVariable: number = 27
@@ -13,24 +17,25 @@ export class coneScript {
     // console.log("UPDATED", this.testVariable)
   }
 
-
   onPointerDown() {
-
     this.clickCount++
 
+    // not working, this.transform seems to be a copy of the transform, not affecting the real entity
+    // this.transform.scale = Vector3.add(this.transform.scale, Vector3.create(0.25, 0.25, 0.25))
+
+    const transform = Transform.getMutable(this.entity)
+    transform.scale = Vector3.add(transform.scale, Vector3.create(0.25, 0.25, 0.25))
+
+
     if (this.clickCount > 10) {
+
       this.myCustomFunction()
     }
 
-
-    console.log("CLICKED", this.clickCount)
+    console.log("CLICKED", this.clickCount, transform.scale)
   }
-
-
 
   myCustomFunction() {
     console.log("CUSTOM FUNCTION")
   }
-
-
 }

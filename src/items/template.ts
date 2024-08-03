@@ -1,6 +1,14 @@
+import { Entity, Transform } from "@dcl/sdk/ecs";
+
 export class templateScript {
 
-  // variables
+  public transform
+
+  constructor(public entity: Entity) {
+
+    entity = entity
+    this.transform = Transform.getMutable(this.entity)
+  }
 
 
   onSpawn() {

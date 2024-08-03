@@ -1,5 +1,5 @@
 import { Vector3 } from "@dcl/sdk/math"
-import { parentClass } from "./template"
+import { parentClass } from "./parentClass"
 import { Transform } from "@dcl/sdk/ecs"
 
 export class coneScript extends parentClass {
@@ -19,9 +19,6 @@ export class coneScript extends parentClass {
 
   onPointerDown() {
     this.clickCount++
-
-    // not working, this.transform seems to be a copy of the transform, not affecting the real entity
-    // this.transform.scale = Vector3.add(this.transform.scale, Vector3.create(0.25, 0.25, 0.25))
 
     const transform = Transform.getMutable(this.entity)
     transform.scale = Vector3.add(transform.scale, Vector3.create(0.25, 0.25, 0.25))

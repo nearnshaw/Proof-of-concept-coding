@@ -137,18 +137,18 @@
             "position": {
               "x": 3.5,
               "y": 0,
-              "z": 4.5
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
+              "z": 5.5
             },
             "rotation": {
               "x": 0,
               "y": 0,
               "z": 0,
               "w": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
             },
             "parent": 0
           }
@@ -156,20 +156,20 @@
         "516": {
           "json": {
             "position": {
-              "x": 8.75,
+              "x": 6.25,
               "y": 0,
-              "z": 14.25
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
+              "z": 5.25
             },
             "rotation": {
               "x": 0,
               "y": 0,
               "z": 0,
               "w": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
             },
             "parent": 0
           }
@@ -201,27 +201,6 @@
               "x": 5.985726833343506,
               "y": -4.3308459168065264e-14,
               "z": 9.79429817199707
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
-            },
-            "rotation": {
-              "x": 0,
-              "y": 0,
-              "z": 0,
-              "w": 1
-            },
-            "parent": 0
-          }
-        },
-        "519": {
-          "json": {
-            "position": {
-              "x": 3.75,
-              "y": 0,
-              "z": 2.25
             },
             "scale": {
               "x": 1,
@@ -447,6 +426,48 @@
             "parent": 0
           }
         },
+        "530": {
+          "json": {
+            "position": {
+              "x": 6.5,
+              "y": 1.25,
+              "z": 5.75
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "parent": 0
+          }
+        },
+        "531": {
+          "json": {
+            "position": {
+              "x": 3.5,
+              "y": 1.25,
+              "z": 5.75
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "parent": 0
+          }
+        },
         "548": {
           "json": {
             "position": {
@@ -487,10 +508,16 @@
         "serializationType": "map"
       },
       "data": {
-        "519": {
+        "530": {
           "json": {
             "networkId": 0,
             "entityId": 3334
+          }
+        },
+        "531": {
+          "json": {
+            "networkId": 0,
+            "entityId": 531
           }
         }
       }
@@ -648,7 +675,7 @@
         },
         "516": {
           "json": {
-            "value": "Fire Hydrant"
+            "value": "Hydrant"
           }
         },
         "517": {
@@ -659,11 +686,6 @@
         "518": {
           "json": {
             "value": "Doorframe - LEDGrid"
-          }
-        },
-        "519": {
-          "json": {
-            "value": "NFT"
           }
         },
         "520": {
@@ -716,31 +738,19 @@
             "value": "Wide Crater"
           }
         },
+        "530": {
+          "json": {
+            "value": "Text"
+          }
+        },
+        "531": {
+          "json": {
+            "value": "Text_1"
+          }
+        },
         "548": {
           "json": {
             "value": "Yellow Buds"
-          }
-        }
-      }
-    },
-    {
-      "name": "core::NftShape",
-      "jsonSchema": {
-        "type": "object",
-        "properties": {},
-        "serializationType": "protocol-buffer",
-        "protocolBuffer": "PBNftShape"
-      },
-      "data": {
-        "519": {
-          "json": {
-            "urn": "",
-            "style": 22,
-            "color": {
-              "r": 1,
-              "g": 1,
-              "b": 1
-            }
           }
         }
       }
@@ -762,12 +772,83 @@
         "serializationType": "map"
       },
       "data": {
-        "519": {
+        "530": {
           "json": {
             "componentIds": [
-              1040,
+              1030,
               1081
             ]
+          }
+        },
+        "531": {
+          "json": {
+            "componentIds": [
+              1030,
+              1081
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "core::TextShape",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {},
+        "serializationType": "protocol-buffer",
+        "protocolBuffer": "PBTextShape"
+      },
+      "data": {
+        "530": {
+          "json": {
+            "text": "Click me too!",
+            "font": 2,
+            "fontSize": 4,
+            "fontAutoSize": false,
+            "textAlign": 4,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "lineSpacing": 0,
+            "outlineWidth": 0,
+            "outlineColor": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "textColor": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
+          }
+        },
+        "531": {
+          "json": {
+            "text": "Click me!",
+            "font": 2,
+            "fontSize": 4,
+            "fontAutoSize": false,
+            "textAlign": 4,
+            "paddingTop": 0,
+            "paddingRight": 0,
+            "paddingBottom": 0,
+            "paddingLeft": 0,
+            "lineSpacing": 0,
+            "outlineWidth": 0,
+            "outlineColor": {
+              "r": 1,
+              "g": 1,
+              "b": 1
+            },
+            "textColor": {
+              "r": 1,
+              "g": 1,
+              "b": 1,
+              "a": 1
+            }
           }
         }
       }
@@ -785,7 +866,7 @@
         "serializationType": "map"
       },
       "data": {
-        "515": {
+        "530": {
           "json": {
             "gizmo": 0
           }
@@ -1203,14 +1284,15 @@
                   516,
                   517,
                   518,
-                  519,
                   513,
                   525,
                   527,
                   528,
                   529,
                   548,
-                  526
+                  526,
+                  530,
+                  531
                 ]
               },
               {
@@ -1235,10 +1317,6 @@
               },
               {
                 "entity": 518,
-                "children": []
-              },
-              {
-                "entity": 519,
                 "children": []
               },
               {
@@ -1298,6 +1376,14 @@
               },
               {
                 "entity": 526,
+                "children": []
+              },
+              {
+                "entity": 530,
+                "children": []
+              },
+              {
+                "entity": 531,
                 "children": []
               }
             ]
@@ -1574,9 +1660,6 @@
         "518": {
           "json": {}
         },
-        "519": {
-          "json": {}
-        },
         "525": {
           "json": {}
         },
@@ -1590,6 +1673,12 @@
           "json": {}
         },
         "529": {
+          "json": {}
+        },
+        "530": {
+          "json": {}
+        },
+        "531": {
           "json": {}
         },
         "548": {
@@ -1643,161 +1732,6 @@
         "524": {
           "json": {
             "value": true
-          }
-        }
-      }
-    },
-    {
-      "name": "inspector::Config",
-      "jsonSchema": {
-        "type": "object",
-        "properties": {
-          "isBasicViewEnabled": {
-            "type": "boolean",
-            "serializationType": "boolean"
-          },
-          "componentName": {
-            "type": "string",
-            "serializationType": "utf8-string"
-          },
-          "fields": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string",
-                  "serializationType": "utf8-string"
-                },
-                "type": {
-                  "type": "string",
-                  "enum": [
-                    "core::Animator",
-                    "core::AudioSource",
-                    "core::AudioStream",
-                    "core::GltfContainer",
-                    "core-schema::Network-Entity",
-                    "core::Material",
-                    "core::MeshCollider",
-                    "core::MeshRenderer",
-                    "core::NftShape",
-                    "core::PointerEvents",
-                    "core-schema::Sync-Components",
-                    "core::TextShape",
-                    "core::Transform",
-                    "core::Tween",
-                    "core::TweenSequence",
-                    "core::VideoPlayer",
-                    "core::VisibilityComponent",
-                    "inspector::Selection",
-                    "inspector::SceneMetadata",
-                    "inspector::Nodes",
-                    "asset-packs::ActionTypes",
-                    "ActionTypes",
-                    "asset-packs::Actions",
-                    "Actions",
-                    "asset-packs::Counter",
-                    "Counter",
-                    "asset-packs::CounterBar",
-                    "CounterBar",
-                    "asset-packs::Triggers",
-                    "Triggers",
-                    "asset-packs::States",
-                    "States",
-                    "inspector::TransformConfig",
-                    "inspector::Hide",
-                    "inspector::Lock",
-                    "inspector::Config",
-                    "inspector::Ground",
-                    "inspector::Tile"
-                  ],
-                  "default": "asset-packs::Actions",
-                  "serializationType": "enum-string",
-                  "enumObject": {
-                    "ANIMATOR": "core::Animator",
-                    "AUDIO_SOURCE": "core::AudioSource",
-                    "AUDIO_STREAM": "core::AudioStream",
-                    "GLTF_CONTAINER": "core::GltfContainer",
-                    "NETWORK_ENTITY": "core-schema::Network-Entity",
-                    "MATERIAL": "core::Material",
-                    "MESH_COLLIDER": "core::MeshCollider",
-                    "MESH_RENDERER": "core::MeshRenderer",
-                    "NFT_SHAPE": "core::NftShape",
-                    "POINTER_EVENTS": "core::PointerEvents",
-                    "SYNC_COMPONENTS": "core-schema::Sync-Components",
-                    "TEXT_SHAPE": "core::TextShape",
-                    "TRANSFORM": "core::Transform",
-                    "TWEEN": "core::Tween",
-                    "TWEEN_SEQUENCE": "core::TweenSequence",
-                    "VIDEO_PLAYER": "core::VideoPlayer",
-                    "VISIBILITY_COMPONENT": "core::VisibilityComponent",
-                    "Selection": "inspector::Selection",
-                    "Scene": "inspector::SceneMetadata",
-                    "Nodes": "inspector::Nodes",
-                    "ActionTypes": "asset-packs::ActionTypes",
-                    "asset-packs::ActionTypes": "ActionTypes",
-                    "Actions": "asset-packs::Actions",
-                    "asset-packs::Actions": "Actions",
-                    "Counter": "asset-packs::Counter",
-                    "asset-packs::Counter": "Counter",
-                    "CounterBar": "asset-packs::CounterBar",
-                    "asset-packs::CounterBar": "CounterBar",
-                    "Triggers": "asset-packs::Triggers",
-                    "asset-packs::Triggers": "Triggers",
-                    "States": "asset-packs::States",
-                    "asset-packs::States": "States",
-                    "TransformConfig": "inspector::TransformConfig",
-                    "Hide": "inspector::Hide",
-                    "Lock": "inspector::Lock",
-                    "Config": "inspector::Config",
-                    "Ground": "inspector::Ground",
-                    "Tile": "inspector::Tile"
-                  }
-                },
-                "layout": {
-                  "type": "string",
-                  "serializationType": "optional",
-                  "optionalJsonSchema": {
-                    "type": "string",
-                    "serializationType": "utf8-string"
-                  }
-                },
-                "basicViewId": {
-                  "type": "string",
-                  "serializationType": "optional",
-                  "optionalJsonSchema": {
-                    "type": "string",
-                    "serializationType": "utf8-string"
-                  }
-                }
-              },
-              "serializationType": "map"
-            },
-            "serializationType": "array"
-          },
-          "assetId": {
-            "type": "string",
-            "serializationType": "optional",
-            "optionalJsonSchema": {
-              "type": "string",
-              "serializationType": "utf8-string"
-            }
-          }
-        },
-        "serializationType": "map"
-      },
-      "data": {
-        "519": {
-          "json": {
-            "isBasicViewEnabled": true,
-            "componentName": "NFT Portrait",
-            "fields": [
-              {
-                "name": "NFT Portrait",
-                "type": "core::NftShape"
-              }
-            ],
-            "assetId": "dbffd66a-8c1f-4b34-bed4-c71ab5cb4024"
           }
         }
       }

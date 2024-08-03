@@ -20,6 +20,7 @@ export const classOfEachObject = new Map<Entity, any>()
 
 export function addScriptedComponent() {
 
+  // cone
   const cone = engine.getEntityOrNullByName("Cone")
 
   if (cone) {
@@ -27,13 +28,20 @@ export function addScriptedComponent() {
       Scripted.create(cone)
     }
 
+    const coneScriptInstance = new coneScript()
+    classOfEachObject.set(cone, coneScriptInstance)
+  }
 
-    classOfEachObject.set(cone, coneScript)
+  // hydrant (shares same script as cone)
+  const hydrant = engine.getEntityOrNullByName("Hydrant")
 
-    // const coneClass = classOfEachObject.get(cone)
+  if (hydrant) {
+    if (!Scripted.has(hydrant)) {
+      Scripted.create(hydrant)
+    }
 
-    // coneClass.onSpawn()
-
+    const coneScriptInstance2 = new coneScript()
+    classOfEachObject.set(hydrant, coneScriptInstance2)
   }
 }
 
@@ -56,12 +64,16 @@ export function onSceneInit() {
             button: InputAction.IA_POINTER,
             hoverText: 'Click'
           }
-        },
-        myClass.onPointerDown()
+        }, () => {
+          myClass.onPointerDown()
+        }
+
       )
     }
-    engine.addSystem(scriptedObjectsSystem)
+
   }
+
+  engine.addSystem(scriptedObjectsSystem)
 }
 
 
@@ -72,8 +84,6 @@ export function scriptedObjectsSystem(dt: number) {
 
     if (myClass.onUpdate) {
       myClass.onUpdate(dt)
-
-      console.log(myClass.testVariable)
     }
   }
 }

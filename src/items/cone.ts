@@ -1,28 +1,35 @@
 export class coneScript {
 
   // variables
-
   public testVariable: number = 27
+  public clickCount: number = 0
 
   onSpawn() {
     console.log("SPAWNED")
   }
 
   onUpdate(dt: number) {
-
-    console.log("UPDATED")
+    // this.testVariable += dt
+    // console.log("UPDATED", this.testVariable)
   }
 
 
   onPointerDown() {
 
-    console.log("CLICKED")
+    this.clickCount++
+
+    if (this.clickCount > 10) {
+      this.myCustomFunction()
+    }
+
+
+    console.log("CLICKED", this.clickCount)
   }
 
 
 
   myCustomFunction() {
-
+    console.log("CUSTOM FUNCTION")
   }
 
 

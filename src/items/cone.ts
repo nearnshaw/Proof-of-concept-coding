@@ -1,8 +1,8 @@
 import { Vector3 } from "@dcl/sdk/math"
-import { templateScript } from "./template"
+import { parentClass } from "./template"
 import { Transform } from "@dcl/sdk/ecs"
 
-export class coneScript extends templateScript {
+export class coneScript extends parentClass {
 
   // variables
   public testVariable: number = 27

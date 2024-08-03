@@ -1,6 +1,6 @@
 import { Entity, Transform } from "@dcl/sdk/ecs";
 
-export class templateScript {
+export class parentClass {
 
   public transform
 
@@ -8,24 +8,6 @@ export class templateScript {
 
     entity = entity
     this.transform = Transform.getMutable(this.entity)
-  }
-
-
-  onSpawn() {
-
-  }
-
-  onUpdate(dt: number) {
-
-  }
-
-
-  onPointerDown() {
-
-  }
-
-  myCustomFunction() {
-
   }
 
 
